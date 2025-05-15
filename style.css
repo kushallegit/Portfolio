@@ -30,6 +30,7 @@ header {
   align-items: center;
 }
 
+
 .logo {
   font-size: 1.8rem;
   font-weight: 600;
@@ -141,6 +142,49 @@ li {
 ul {
   padding-left: 1.5rem;
 }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skill-card {
+  background-color: #ffffff;
+  border: 1px solid var(--light);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  text-align: left;
+}
+
+.skill-card h3 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.skill-card h4 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.skill-card p,
+.skill-card li {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.skill-card ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 0;
+}
+
 
 .experience-list li {
   margin-bottom: 1rem;

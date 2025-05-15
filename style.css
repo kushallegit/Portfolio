@@ -19,12 +19,82 @@ body {
 }
 
 header {
-  padding: 2rem;
+  padding: 3rem 2rem 4rem;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 960px;
-  margin: auto;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.intro-text {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.intro-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #17203D;
+  margin-bottom: 1rem;
+}
+
+.intro-subtitle {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.about-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+#about h2 {
+  display: none;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.profile-pic-wrapper {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--accent);
+  flex-shrink: 0;
+  margin-top: -50px;
+  margin-left: 50px;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 h1 {
@@ -52,7 +122,7 @@ h1 {
 }
 
 section {
-  max-width: 960px;
+  max-width: 1150px;
   margin: 4rem auto;
   padding: 0 2rem;
 }

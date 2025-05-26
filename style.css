@@ -59,6 +59,19 @@ header {
   line-height: 1.7;
 }
 
+.intro-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .about-flex {
   display: flex;
   align-items: flex-start;

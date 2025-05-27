@@ -199,6 +199,12 @@ ul {
   margin: 0.5rem 0 0;
 }
 
+.skill-card:hover {
+  background-color: #f9f9ff;
+  transform: translateY(-8px) scale(1.02);
+  border-left-color: var(--accent);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06), 0 5px 15px rgba(0, 0, 0, 0.04);
+}
 
 .experience-list li {
   margin-bottom: 1rem;

@@ -171,12 +171,18 @@ ul {
   border: 1px solid var(--light);
   padding: 2rem;
   text-align: left;
+  cursor: default;
+  border-left: 4px solid transparent;
+  transition: border-left-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+  will-change: transform, box-shadow;
 }
 
 .skill-card h3 {
   color: var(--accent);
   margin-bottom: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
 .skill-card h4 {
@@ -204,6 +210,11 @@ ul {
   transform: translateY(-8px) scale(1.02);
   border-left-color: var(--accent);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06), 0 5px 15px rgba(0, 0, 0, 0.04);
+}
+.skill-card:focus-within,
+.skill-card:focus-visible {
+  outline: 2px dashed var(--accent);
+  outline-offset: 6px;
 }
 
 .experience-list li {

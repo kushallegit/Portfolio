@@ -1,0 +1,59 @@
+/* CSS Variables */
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #555;
+  --accent: #6552D0;
+  --light: #f3f3f3;
+  --background: #f9f9fb;
+}
+
+/* Box sizing for layout consistency */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins and prevent horizontal overflow */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base body styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Typography */
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+p,
+li {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+/* Section Layout */
+section {
+  max-width: 1150px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}

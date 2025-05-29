@@ -100,9 +100,9 @@
   }
 
   .col .box::before {
-    top: 50%;
+    top: 20%;
     transform: translateY(-50%);
-    right: calc(100% + 10px);
+    right: calc(100% + 9.5px);
   }
 
   .col .box h3 {

@@ -169,28 +169,51 @@
 </section>
 
 
-  <section id="projects">
+   <section id="projects">
   <h2>Projects</h2>
-  <div class="projects-grid">
 
-    <div class="card">
-      <img src="images/nike-site.png" alt="Nike website screenshot" />
-      <div class="card-content">
-        <h3>👟 Nike Website Replica</h3>
-        <p>A responsive frontend clone of Nike’s landing page using HTML, CSS & JS.</p>
-        <div class="card-buttons">
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="frontend">Frontend</button>
+    <button class="filter-btn" data-category="backend">Backend</button>
+    <button class="filter-btn" data-category="it">IT</button>
+    <button class="filter-btn" data-category="design">Design</button>
+    <button class="filter-btn" data-category="fullstack">Full-Stack</button>
+  </div>
+
+  <div class="sticker-grid">
+
+    <!-- Nike Project -->
+    <div class="sticker-item" data-category="frontend" data-aos="fade-up" data-aos-duration="800">
+      <img src="images/nike-site.png" alt="Nike Logo" class="sticker-logo" />
+      <div class="sticker-info">
+        <h3>Nike Website Replica</h3>
+        <p>Responsive clone using HTML, CSS & JS</p>
+        <div class="tech-icons">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+        </div>
+        <div class="project-links">
           <a href="https://github.com/kushallegit/ProjectCSS" target="_blank">GitHub</a>
           <a href="https://kushallegit.github.io/ProjectCSS/" target="_blank">Live</a>
         </div>
       </div>
     </div>
 
-    <div class="card">
-      <img src="images/cafe-fullstack.png" alt="Cafe website screenshot" />
-      <div class="card-content">
-        <h3>☕ Full-Stack Café Website</h3>
-        <p>Built with Node.js, Express & MongoDB – includes contact/order functionality.</p>
-        <div class="card-buttons">
+    <!-- Café Project -->
+    <div class="sticker-item" data-category="fullstack" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+      <img src="images/cafe-fullstack.png" alt="Café Logo" class="sticker-logo" />
+      <div class="sticker-info">
+        <h3>Café Website</h3>
+        <p>Full-stack with Node.js, MongoDB, Express</p>
+        <div class="tech-icons">
+          <i class="fab fa-node-js"></i>
+          <i class="fas fa-database"></i>
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+        </div>
+        <div class="project-links">
           <a href="https://github.com/kushallegit/CafedaVinci" target="_blank">GitHub</a>
           <a href="https://kushallegit.github.io/CafedaVinci/" target="_blank">Live</a>
         </div>

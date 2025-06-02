@@ -268,7 +268,100 @@ section {
 }
 
 /* Projects Section */
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
+.filter-btn {
+  padding: 0.5rem 1rem;
+  margin: 0.4rem;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #4e3cb1;
+}
+
+
+.sticker-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.sticker-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.sticker-item:hover {
+  transform: translateY(-6px);
+}
+
+.sticker-logo {
+  width: 120px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.sticker-info {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  text-align: center;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.sticker-item:hover .sticker-info {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.sticker-info h3 {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+.sticker-info p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+
+.tech-icons i {
+  font-size: 1.2rem;
+  margin: 0 0.4rem;
+  color: #444;
+}
+
+.project-links a {
+  margin: 0.3rem;
+  background-color: var(--accent);
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+.project-links a:hover {
+  background-color: #4e3cb1;
+}
 
 /* Contact Section */
 #contact {

@@ -19,3 +19,10 @@ filterButtons.forEach(button => {
     });
   });
 });
+
+/* Scroll Progress Bar*/
+window.addEventListener('scroll', () => {
+  const scrollProgress = document.querySelector(".scroll-progress");
+  const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+  scrollProgress.style.width = `${scrolled * 100}%`;
+});

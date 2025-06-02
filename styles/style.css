@@ -312,7 +312,8 @@ section {
 
 .sticker-logo {
   width: 120px;
-  height: auto;
+  height: 120px;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
@@ -321,12 +322,16 @@ section {
   opacity: 0;
   overflow: hidden;
   text-align: center;
-  transition: max-height 0.4s ease, opacity 0.3s ease;
+  transition: max-height 1s ease, opacity 1s ease;
   margin-top: 0.5rem;
 }
 
+.sticker-item:hover .sticker-logo {
+  transform: scale(1.05);
+}
+
 .sticker-item:hover .sticker-info {
-  max-height: 300px;
+  max-height: 400px;
   opacity: 1;
 }
 

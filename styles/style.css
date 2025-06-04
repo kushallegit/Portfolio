@@ -287,14 +287,16 @@ section {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.filter-btn:hover,
 .filter-btn.active {
   background-color: #4e3cb1;
 }
-
+.filter-btn:hover {
+  background-color: #4e3cb1;
+  transform: translateY(-4px) scale(1.02);
+}
 
 .sticker-grid {
   display: flex;
@@ -313,7 +315,7 @@ section {
 }
 
 .sticker-item:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px) scale(1.03);
 }
 
 .sticker-logo {
@@ -333,7 +335,7 @@ section {
 }
 
 .sticker-item:hover .sticker-logo {
-  transform: scale(1.05);
+  transform: translateY(-8px) scale(1.10);
 }
 
 .sticker-item:hover .sticker-info {

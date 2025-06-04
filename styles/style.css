@@ -260,10 +260,7 @@ section {
   height: 90px;
   object-fit: contain;
   flex-shrink: 0;
-  border-radius: 8px;
   margin-top: 0.2rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  border: 1px solid #eee;
 }
 
 .box-inner {

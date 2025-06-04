@@ -107,11 +107,6 @@ header {
   outline: none;
 }
 
-.nav a:focus {
-  outline: 2px dashed var(--accent);
-  outline-offset: 4px;
-}
-
 section {
   max-width: 1150px;
   margin: 4rem auto;
@@ -133,7 +128,7 @@ section {
   text-align: left;
   cursor: default;
   border-left: 4px solid transparent;
-  transition: border-left-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+  transition: border-left-color 0.4s ease, transform 0.4s ease 0.05s, box-shadow 0.4s ease 0.1s;
   will-change: transform, box-shadow;
 }
 

@@ -202,24 +202,38 @@ section {
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid transparent;
+  transition: border-left-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+  will-change: transform, box-shadow;
 }
 
 .col .box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  background-color: #f9f9ff;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06), 0 5px 15px rgba(0, 0, 0, 0.04);
+  border-left-color: var(--accent);
+}
+
+.col .box:focus-within,
+.col .box:focus-visible {
+  outline: 2px dashed var(--accent);
+  outline-offset: 6px;
+}
+
+.col .box:hover::before {
+  background-color: #6552D0aa;
 }
 
 /* Timeline dot */
-.col .box::before {
+.col .contents::before {
   content: '';
   position: absolute;
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  right: calc(100% + 22px);
-  top: 0;
   background-color: var(--accent);
+  left: -9px;
+  top: var(--dot-position, 0);
 }
 
 /* Typography */

@@ -1,0 +1,11 @@
+#quoteBox {
+  background: #f9f9fb;
+  padding: 1.2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  border-left: 4px solid var(--accent, #6552D0);
+  font-style: italic;
+  font-size: 1rem;
+  color: #333;
+}
+

@@ -26,3 +26,14 @@ window.addEventListener('scroll', () => {
   const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
   scrollProgress.style.width = `${scrolled * 100}%`;
 });
+
+/* Random Quotes */
+// Fetch a random quote from the API and display it
+fetch("https://dummyjson.com/quotes/random")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("quote").innerText = `"${data.quote}" — ${data.author}`;
+  })
+  .catch(() => {
+    document.getElementById("quote").innerText = "Could not load quote.";
+  });

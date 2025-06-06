@@ -32,6 +32,14 @@
     width: 70px;
     height: 70px;
   }
+
+  #backToTop {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -121,6 +129,14 @@
   section {
     padding: 0 1rem;
     margin: 2rem 0;
+  }
+
+  #backToTop {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+    bottom: 1rem;
+    right: 1rem;
   }
 }
 

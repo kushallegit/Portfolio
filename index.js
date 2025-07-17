@@ -37,3 +37,34 @@ fetch("https://dummyjson.com/quotes/random")
   .catch(() => {
     document.getElementById("quote").innerText = "Could not load quote.";
   });
+
+document.querySelector(".contact-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+  const submitBtn = form.querySelector("button[type='submit']");
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
+
+  const name = form.name.value;
+  const email = form.email.value;
+  const message = form.message.value;
+
+  try {
+    const res = await fetch("http://localhost:3000/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message }),
+    });
+
+    const data = await res.json();
+    alert(data.message);
+    form.reset();
+  } catch (err) {
+    alert("❌ Failed to send message. Please try again.");
+    console.error(err);
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Send Message";
+  }
+});

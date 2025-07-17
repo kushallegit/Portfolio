@@ -38,9 +38,11 @@ fetch("https://dummyjson.com/quotes/random")
     document.getElementById("quote").innerText = "Could not load quote.";
   });
 
+// Contact form submission
 document.querySelector(".contact-form").addEventListener("submit", async (e) => {
   e.preventDefault();
 
+  const API_URL = "https://portfolio-jk5f.onrender.com/api/contact";
   const form = e.target;
   const submitBtn = form.querySelector("button[type='submit']");
   submitBtn.disabled = true;
@@ -50,8 +52,14 @@ document.querySelector(".contact-form").addEventListener("submit", async (e) => 
   const email = form.email.value;
   const message = form.message.value;
 
+  const res = await fetch(API_URL, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ name, email, message }),
+  });
+
   try {
-    const res = await fetch("http://localhost:3000/api/contact", {
+    const res = await fetch("https://portfolio-jk5f.onrender.com/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, message }),

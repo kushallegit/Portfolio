@@ -24,7 +24,7 @@ app.post("/api/contact", async (req, res) => {
     },
   });
 
-  // Email to you (Kushal)
+  // Email (Kushal)
   const mailToMe = {
     from: email,
     to: process.env.EMAIL_USER,

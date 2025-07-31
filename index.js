@@ -27,6 +27,17 @@ window.addEventListener('scroll', () => {
   scrollProgress.style.width = `${scrolled * 100}%`;
 });
 
+/* Back to Top Button */
+const btn = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  btn.style.display = window.scrollY > 300 ? "block" : "none";
+});
+
+btn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 /* Random Quotes */
 // Fetch a random quote from the API and display it
 fetch("https://dummyjson.com/quotes/random")

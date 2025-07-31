@@ -1,1 +1,114 @@
+/* Timeline grid wrapper */
+.timeline-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
 
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.col h2 {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+/* Timeline vertical line */
+.col .contents {
+  padding: 0px 30px;
+  margin-top: 0;
+  padding-top: 0;
+  border-left: 2px solid #bababa;
+  position: relative;
+  height: 82.5%;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -8.5px; 
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  z-index: 1;
+}
+
+/* Box (timeline card) */
+.col .contents .box {
+	position: relative;
+	padding: 1.2rem 1.5rem;
+	margin-bottom: 2rem;
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+	border-left: 4px solid transparent;
+	transition: border-left-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+	will-change: transform, box-shadow;
+	display: bloc
+}
+
+.col .contents .box:first-child {
+  margin-top: 0.5rem;
+}
+
+.col .box:hover {
+  background-color: #f9f9ff;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06), 0 5px 15px rgba(0, 0, 0, 0.04);
+  border-left-color: var(--accent);
+}
+
+.col .box:focus-within,
+.col .box:focus-visible {
+  outline: 2px dashed var(--accent);
+  outline-offset: 6px;
+}
+
+.col .box:hover::before {
+  background-color: #6552D0aa;
+}
+
+/* Timeline box content layout */
+.box-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* Typography */
+.col .box h3 {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.2rem;
+}
+
+.col .box h4 {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.col .box p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Timeline logos */
+.timeline-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.box-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
